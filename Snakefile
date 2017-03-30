@@ -1,6 +1,11 @@
 configfile: "config.yml"
 workdir: config["WORKDIR"]
 
+rule all:
+	input:
+		"snp_primers.bed"
+
+
 
 rule create_forward:
 	input:
@@ -81,6 +86,5 @@ rule intersect_dbSNP:
 	log:
 		"snp_primers.bed.log"
 	shell:
-		"bedtools intersect -a {config[DB_SNP]} -b {input} -wa  > {output} 2> {log};"
-		"curl --upload-file {input} https://transfer.sh/{input}"
+		"bedtools intersect -a {config[DB_SNP]} -b {input} -wa  > {output} 2> {log}"
 
