@@ -1,0 +1,6 @@
+---
+BOWTIE_INDEX: /PUBLIC_DATA/ReferenceGenomes/GRCh37.p5/reference.b37.fasta 
+DB_SNP: ../dbSNP.bed
+WORKDIR: examples
+FORWARD_COLOR: 255,0,0
+REVERSE_COLOR: 0,0,255
